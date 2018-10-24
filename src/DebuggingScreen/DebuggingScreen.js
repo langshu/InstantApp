@@ -19,7 +19,20 @@ export default class DebuggingScreen extends React.Component {
   render() {
     return (
       <Container>
-        <Header/>
+        <Header>
+          <Left>
+            <Button
+              transparent
+              onPress={() => this.props.navigation.toggleDrawer()}
+            >
+              <Icon name="menu" />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Debugging</Title>
+          </Body>
+          <Right />
+        </Header>
         <Content padder>
           <Card>
             <CardItem>
