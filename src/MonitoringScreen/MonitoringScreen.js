@@ -102,7 +102,7 @@ class NetworksTab extends React.Component {
               }}
             >
               <Left>
-                <Icon active name="wifi" />
+                <Icon style={{width: 30}} type="FontAwesome" name="wifi" />
               </Left>
               <Body>
                 <Text>{data.name}</Text>
@@ -138,7 +138,7 @@ class APsTab extends React.Component {
               }}
             >
               <Left>
-                <Icon active name="wifi" />
+                <Icon style={{width: 30}} type="FontAwesome" name="wifi" />
               </Left>
               <Body>
                 <Text>{data.name}</Text>
@@ -211,7 +211,7 @@ export default class MonitoringScreen extends React.Component {
           <Right />
         </Header>
         <Tabs>
-          <Tab heading="Netowrks">
+          <Tab heading="Networks">
             <NetworksTab navigation={this.props.navigation}/>
           </Tab>
           <Tab heading="APs">
