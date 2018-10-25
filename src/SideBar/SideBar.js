@@ -1,5 +1,5 @@
 import React from "react";
-import { AppRegistry, Image, StatusBar } from "react-native";
+import { Image } from "react-native";
 import {
     Button,
     Text,
@@ -44,7 +44,7 @@ export default class SideBar extends React.Component {
             style={{
               width: 177,
               alignSelf: "center",
-              marginTop: 30
+              marginTop: 35
             }}
           />
           <List

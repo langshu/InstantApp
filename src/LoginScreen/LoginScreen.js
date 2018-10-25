@@ -1,5 +1,5 @@
 import React from "react";
-import { StatusBar } from "react-native";
+import { StyleSheet, Image, View } from "react-native";
 import {
   Button,
   Text,
@@ -12,33 +12,58 @@ import {
   Title,
   Left,
   Icon,
-  Right
+  Right,
+  Form,
+  Item,
+  Input,
+  Label
 } from "native-base";
 
 export default class LoginScreen extends React.Component {
   render() {
     return (
-      <Container>
-        <Header/>
-        <Content padder>
-          <Card>
-            <CardItem>
-              <Body>
-                <Text>LoginScreen</Text>
-              </Body>
-            </CardItem>
-          </Card>
-          <Button
-            full
-            rounded
-            dark
-            style={{ marginTop: 10 }}
-            onPress={() => this.props.navigation.navigate("Home")}
-          >
-            <Text>Login</Text>
-          </Button>
-        </Content>
-      </Container>
+    <View style={styles.container}>
+        <View style={styles.inner}>
+            <Image 
+                source={require('../../images/login-logo.png')}
+                style={styles.logo}
+            />
+            <Form>
+                <Item>
+                    <Icon type="FontAwesome" name="user" />
+                    <Input placeholder="Username" />
+                </Item>
+                <Item>
+                    <Icon type="FontAwesome" name="lock" />
+                    <Input secureTextEntry placeholder="Password" />
+                </Item>
+                <Button
+                    full
+                    rounded
+                    style={{ marginTop: 20 }}
+                    onPress={() => this.props.navigation.navigate("Home")}>
+                    <Text>Login</Text>
+                </Button>
+            </Form>
+        </View>
+    </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    inner: {
+        width: "70%",
+    },
+    logo: {
+        width: 276,
+        alignSelf: "center",
+        marginBottom: 10
+    },
+});

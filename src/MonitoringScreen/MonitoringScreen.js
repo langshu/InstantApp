@@ -18,31 +18,31 @@ import {
 export default class MonitoringScreen extends React.Component {
   render() {
     return (
-      <Container>
-        <Header>
-          <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.toggleDrawer()}
-            >
-              <Icon name="menu" />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Monitoring</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content padder>
-          <Card>
-            <CardItem>
-              <Body>
-                <Text>MonitoringScreen</Text>
-              </Body>
-            </CardItem>
-          </Card>
-        </Content>
-      </Container>
+        <Container>
+            <Header>
+                <Left>
+                    <Button
+                      transparent
+                      onPress={() => this.props.navigation.toggleDrawer()}
+                    >
+                        <Icon name="menu" />
+                    </Button>
+                </Left>
+                <Body>
+                    <Title>Monitoring</Title>
+                </Body>
+                <Right />
+            </Header>
+            <Content padder>
+                <Card>
+                    <CardItem>
+                        <Body>
+                            <Text>MonitoringScreen</Text>
+                        </Body>
+                    </CardItem>
+                </Card>
+            </Content>
+        </Container>
     );
   }
 }
