@@ -20,35 +20,42 @@ import {
 } from "native-base";
 
 export default class LoginScreen extends React.Component {
-  render() {
-    return (
-    <View style={styles.container}>
-        <View style={styles.inner}>
+    doLogin() {
+        this.props.navigation.navigate("Home")
+    }
+    render() {
+        return (
+        <View style={styles.container}>
             <Image 
-                source={require('../../images/login-logo.png')}
-                style={styles.logo}
+                source={require('../../images/desktop.jpg')}
+                style={styles.backgroundImage}
             />
-            <Form>
-                <Item>
-                    <Icon type="FontAwesome" name="user" />
-                    <Input placeholder="Username" />
-                </Item>
-                <Item>
-                    <Icon type="FontAwesome" name="lock" />
-                    <Input secureTextEntry placeholder="Password" />
-                </Item>
-                <Button
-                    full
-                    rounded
-                    style={{ marginTop: 20 }}
-                    onPress={() => this.props.navigation.navigate("Home")}>
-                    <Text>Login</Text>
-                </Button>
-            </Form>
+            <View style={styles.inner}>
+                <Image 
+                    source={require('../../images/login-logo.png')}
+                    style={styles.logo}
+                />
+                <Text style={styles.welcome}>Welcome to Instant</Text>
+                <Form>
+                    <Item>
+                        <Icon type="FontAwesome" name="user" />
+                        <Input placeholder="Username" />
+                    </Item>
+                    <Item>
+                        <Icon type="FontAwesome" name="lock" />
+                        <Input secureTextEntry placeholder="Password" />
+                    </Item>
+                    <Button
+                        block
+                        style={{ marginTop: 20, backgroundColor: "#02a7ec" }}
+                        onPress={this.doLogin.bind(this)}>
+                        <Text>Login</Text>
+                    </Button>
+                </Form>
+            </View>
         </View>
-    </View>
-    );
-  }
+        );
+    }
 }
 
 const styles = StyleSheet.create({
@@ -62,8 +69,21 @@ const styles = StyleSheet.create({
         width: "70%",
     },
     logo: {
-        width: 276,
+        width: 190,
+        height: 100,
         alignSelf: "center",
-        marginBottom: 10
     },
+    backgroundImage: {
+        position: "absolute",
+        height: "100%",
+        width: "100%",
+        opacity: 0.2
+    },
+    welcome: {
+        alignSelf: "center",
+        color: "#7a7a7a",
+        fontSize: 20,
+        marginTop: 20,
+        marginBottom: 20
+    }
 });
