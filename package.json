@@ -10,7 +10,9 @@
     "native-base": "^2.8.1",
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.3",
-    "react-navigation": "^2.18.0"
+    "react-native-svg": "^8.0.8",
+    "react-navigation": "^2.18.0",
+    "victory-native": "^30.5.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
