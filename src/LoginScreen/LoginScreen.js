@@ -21,6 +21,25 @@ import {
 
 export default class LoginScreen extends React.Component {
     doLogin() {
+        // fetch('https://10.65.68.24:4343/swarm.cgi?opcode=network-summary&cmd=show network-summary', {
+        //     method: 'POST',
+        //     headers: {
+        //         Accept: 'application/json',
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({
+        //         opcode: "login",
+        //         user: "admin",
+        //         passwd: "admin",
+        //     }),
+        // })
+        // .then(responseJson => {
+        //     console.log(responseJson);
+        //     this.props.navigation.navigate("Home")
+        // })
+        // .catch((error) =>{
+        //     console.error(error);
+        // });
         this.props.navigation.navigate("Home")
     }
     render() {
@@ -77,7 +96,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         height: "100%",
         width: "100%",
-        opacity: 0.2
+        opacity: 0.25
     },
     welcome: {
         alignSelf: "center",
