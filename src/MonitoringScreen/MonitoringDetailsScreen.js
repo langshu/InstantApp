@@ -645,7 +645,7 @@ class NetworkViewTop extends React.Component {
     return (
       <View style={styles.view}>
         <View style={styles.rowView}>
-          <Icon style={{width: 35, flex:1, flex: 1, alignSelf: 'center'}} type="FontAwesome" name="wifi" />
+          <Icon style={{width: 35, height:30, alignSelf: 'center'}} type="FontAwesome" name="wifi" />
           <Text style={styles.rowValueText}>{network.type}</Text>
           <Text style={styles.rowValueText}>{network.band}</Text>
         </View>
@@ -670,7 +670,7 @@ class APViewTop extends React.Component {
     return (
       <View style={styles.view}>
         <View style={styles.rowView}>
-          <Icon style={{width: 35, flex:1, flex: 1, alignSelf: 'center'}} type="FontAwesome" name="wifi" />
+          <Icon style={{width: 35, height:30, alignSelf: 'center'}} type="FontAwesome" name="wifi" />
           <Text style={styles.rowValueText}>{ap.type}</Text>
           <Text style={styles.rowValueText}>{ap.sn}</Text>
         </View>
@@ -695,17 +695,17 @@ class ClientViewTop extends React.Component {
     return (
       <View style={styles.view}>
         <View style={styles.rowView}>
-          <Icon style={{width: 30, flex:1, flex: 1, alignSelf: 'center'}} type="FontAwesome" name="tablet" />
+          <Icon style={{height:30, alignSelf: 'center'}} type="FontAwesome" name="tablet" />
           <Text style={styles.rowValueText}>{client.ip_address}</Text>
           <Text style={styles.rowValueText}>{client.channel}</Text>
         </View>
         <View style={styles.rowView}>
-          <Text style={{width: 30, height:30}} />
+          <Icon style={{width: 30, height:30}} />
           <Text style={styles.rowText}>Signal</Text>
           <Text style={styles.rowValueText}>{client.signal}</Text>
         </View> 
         <View style={styles.rowView}>
-          <Text style={{width: 30, height:30}} />
+          <Icon style={{width: 30, height:30}} />
           <Text style={styles.rowText}>Speed</Text>
           <Text style={styles.rowValueText}>{client.speed}</Text>
         </View>
