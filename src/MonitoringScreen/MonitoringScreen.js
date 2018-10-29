@@ -97,7 +97,7 @@ class NetworksTab extends React.Component {
               onPress={() => {
                 this.props.navigation.navigate('MonitoringDetails', {
                   type: 'network',
-                  name: data.name
+                  key: data.name
                 });
               }}
             >
@@ -133,7 +133,7 @@ class APsTab extends React.Component {
               onPress={() => {
                 this.props.navigation.navigate('MonitoringDetails', {
                   type: 'ap',
-                  name: data.name
+                  key: data.name
                 });
               }}
             >
@@ -169,7 +169,7 @@ class ClinetsTab extends React.Component {
               onPress={() => {
                 this.props.navigation.navigate('MonitoringDetails', {
                   type: 'client',
-                  name: data.name
+                  key: data.name
                 });
               }}
             >
@@ -225,6 +225,8 @@ export default class MonitoringScreen extends React.Component {
     );
   }
 }
+
+
 
 const styles = StyleSheet.create({
     list: {
