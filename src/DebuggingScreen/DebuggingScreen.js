@@ -37,7 +37,30 @@ export default class DebuggingScreen extends React.Component {
           <Card>
             <CardItem>
               <Body>
-                <Text>DebuggingScreen</Text>
+                <Text>
+                    ----------Download log start----------
+                </Text>
+                <Text>
+                    download log not available
+                </Text>
+                <Text>
+                    ----------Download log end------------
+                </Text>
+                <Text>
+                    Download status: incomplete
+                </Text>
+                <Text>
+                    ----------Upgrade log start----------
+                </Text>
+                <Text>
+                    upgrade log not available
+                </Text>
+                <Text>
+                    ----------Upgrade log end------------
+                </Text>
+                <Text>
+                    Upgrade status: upgrade status not available
+                </Text>
               </Body>
             </CardItem>
           </Card>

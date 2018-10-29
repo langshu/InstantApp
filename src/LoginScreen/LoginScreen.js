@@ -40,7 +40,7 @@ export default class LoginScreen extends React.Component {
         // .catch((error) =>{
         //     console.error(error);
         // });
-        this.props.navigation.navigate("Home")
+        this.props.navigation.navigate("Monitoring")
     }
     render() {
         return (
